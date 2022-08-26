@@ -1,0 +1,309 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity register_256Byte is
+port(
+D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, 
+D16, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D30, D31, 
+D32, D33, D34, D35, D36, D37, D38, D39, D40, D41, D42, D43, D44, D45, D46, D47, 
+D48, D49, D50, D51, D52, D53, D54, D55, D56, D57, D58, D59, D60, D61, D62, D63, 
+D64, D65, D66, D67, D68, D69, D70, D71, D72, D73, D74, D75, D76, D77, D78, D79, 
+D80, D81, D82, D83, D84, D85, D86, D87, D88, D89, D90, D91, D92, D93, D94, D95, 
+D96, D97, D98, D99, D100, D101, D102, D103, D104, D105, D106, D107, D108, D109, D110, D111, 
+D112, D113, D114, D115, D116, D117, D118, D119, D120, D121, D122, D123, D124, D125, D126, D127, 
+D128, D129, D130, D131, D132, D133, D134, D135, D136, D137, D138, D139, D140, D141, D142, D143, 
+D144, D145, D146, D147, D148, D149, D150, D151, D152, D153, D154, D155, D156, D157, D158, D159, 
+D160, D161, D162, D163, D164, D165, D166, D167, D168, D169, D170, D171, D172, D173, D174, D175, 
+D176, D177, D178, D179, D180, D181, D182, D183, D184, D185, D186, D187, D188, D189, D190, D191, 
+D192, D193, D194, D195, D196, D197, D198, D199, D200, D201, D202, D203, D204, D205, D206, D207, 
+D208, D209, D210, D211, D212, D213, D214, D215, D216, D217, D218, D219, D220, D221, D222, D223, 
+D224, D225, D226, D227, D228, D229, D230, D231, D232, D233, D234, D235, D236, D237, D238, D239, 
+D240, D241, D242, D243, D244, D245, D246, D247, D248, D249, D250, D251, D252, D253, D254, D255: in std_logic_vector(0 to 7);
+
+clk,RST,W,R: in std_logic;
+
+Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, 
+Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30, Q31, 
+Q32, Q33, Q34, Q35, Q36, Q37, Q38, Q39, Q40, Q41, Q42, Q43, Q44, Q45, Q46, Q47, 
+Q48, Q49, Q50, Q51, Q52, Q53, Q54, Q55, Q56, Q57, Q58, Q59, Q60, Q61, Q62, Q63, 
+Q64, Q65, Q66, Q67, Q68, Q69, Q70, Q71, Q72, Q73, Q74, Q75, Q76, Q77, Q78, Q79, 
+Q80, Q81, Q82, Q83, Q84, Q85, Q86, Q87, Q88, Q89, Q90, Q91, Q92, Q93, Q94, Q95, 
+Q96, Q97, Q98, Q99, Q100, Q101, Q102, Q103, Q104, Q105, Q106, Q107, Q108, Q109, Q110, Q111, 
+Q112, Q113, Q114, Q115, Q116, Q117, Q118, Q119, Q120, Q121, Q122, Q123, Q124, Q125, Q126, Q127, 
+Q128, Q129, Q130, Q131, Q132, Q133, Q134, Q135, Q136, Q137, Q138, Q139, Q140, Q141, Q142, Q143, 
+Q144, Q145, Q146, Q147, Q148, Q149, Q150, Q151, Q152, Q153, Q154, Q155, Q156, Q157, Q158, Q159, 
+Q160, Q161, Q162, Q163, Q164, Q165, Q166, Q167, Q168, Q169, Q170, Q171, Q172, Q173, Q174, Q175, 
+Q176, Q177, Q178, Q179, Q180, Q181, Q182, Q183, Q184, Q185, Q186, Q187, Q188, Q189, Q190, Q191, 
+Q192, Q193, Q194, Q195, Q196, Q197, Q198, Q199, Q200, Q201, Q202, Q203, Q204, Q205, Q206, Q207, 
+Q208, Q209, Q210, Q211, Q212, Q213, Q214, Q215, Q216, Q217, Q218, Q219, Q220, Q221, Q222, Q223, 
+Q224, Q225, Q226, Q227, Q228, Q229, Q230, Q231, Q232, Q233, Q234, Q235, Q236, Q237, Q238, Q239, 
+Q240, Q241, Q242, Q243, Q244, Q245, Q246, Q247, Q248, Q249, Q250, Q251, Q252, Q253, Q254, Q255: buffer std_logic_vector(0 to 7)
+);
+end entity;
+
+ARCHITECTURE struc of register_256Byte is
+component register_8bit 
+port(
+D: in std_logic_vector(0 to 7);
+clk,RST,W,R: in std_logic;
+Q: buffer std_logic_vector(0 to 7)
+);
+end component;
+begin
+R0:register_8bit port map(D0,clk,RST,W,R,Q0);
+R1:register_8bit port map(D1,clk,RST,W,R,Q1);
+R2:register_8bit port map(D2,clk,RST,W,R,Q2);
+R3:register_8bit port map(D3,clk,RST,W,R,Q3);
+R4:register_8bit port map(D4,clk,RST,W,R,Q4);
+R5:register_8bit port map(D5,clk,RST,W,R,Q5);
+R6:register_8bit port map(D6,clk,RST,W,R,Q6);
+R7:register_8bit port map(D7,clk,RST,W,R,Q7);
+R8:register_8bit port map(D8,clk,RST,W,R,Q8);
+R9:register_8bit port map(D9,clk,RST,W,R,Q9);
+R10:register_8bit port map(D10,clk,RST,W,R,Q10);
+R11:register_8bit port map(D11,clk,RST,W,R,Q11);
+R12:register_8bit port map(D12,clk,RST,W,R,Q12);
+R13:register_8bit port map(D13,clk,RST,W,R,Q13);
+R14:register_8bit port map(D14,clk,RST,W,R,Q14);
+R15:register_8bit port map(D15,clk,RST,W,R,Q15);
+R16:register_8bit port map(D16,clk,RST,W,R,Q16);
+R17:register_8bit port map(D17,clk,RST,W,R,Q17);
+R18:register_8bit port map(D18,clk,RST,W,R,Q18);
+R19:register_8bit port map(D19,clk,RST,W,R,Q19);
+R20:register_8bit port map(D20,clk,RST,W,R,Q20);
+R21:register_8bit port map(D21,clk,RST,W,R,Q21);
+R22:register_8bit port map(D22,clk,RST,W,R,Q22);
+R23:register_8bit port map(D23,clk,RST,W,R,Q23);
+R24:register_8bit port map(D24,clk,RST,W,R,Q24);
+R25:register_8bit port map(D25,clk,RST,W,R,Q25);
+R26:register_8bit port map(D26,clk,RST,W,R,Q26);
+R27:register_8bit port map(D27,clk,RST,W,R,Q27);
+R28:register_8bit port map(D28,clk,RST,W,R,Q28);
+R29:register_8bit port map(D29,clk,RST,W,R,Q29);
+R30:register_8bit port map(D30,clk,RST,W,R,Q30);
+R31:register_8bit port map(D31,clk,RST,W,R,Q31);
+R32:register_8bit port map(D32,clk,RST,W,R,Q32);
+R33:register_8bit port map(D33,clk,RST,W,R,Q33);
+R34:register_8bit port map(D34,clk,RST,W,R,Q34);
+R35:register_8bit port map(D35,clk,RST,W,R,Q35);
+R36:register_8bit port map(D36,clk,RST,W,R,Q36);
+R37:register_8bit port map(D37,clk,RST,W,R,Q37);
+R38:register_8bit port map(D38,clk,RST,W,R,Q38);
+R39:register_8bit port map(D39,clk,RST,W,R,Q39);
+R40:register_8bit port map(D40,clk,RST,W,R,Q40);
+R41:register_8bit port map(D41,clk,RST,W,R,Q41);
+R42:register_8bit port map(D42,clk,RST,W,R,Q42);
+R43:register_8bit port map(D43,clk,RST,W,R,Q43);
+R44:register_8bit port map(D44,clk,RST,W,R,Q44);
+R45:register_8bit port map(D45,clk,RST,W,R,Q45);
+R46:register_8bit port map(D46,clk,RST,W,R,Q46);
+R47:register_8bit port map(D47,clk,RST,W,R,Q47);
+R48:register_8bit port map(D48,clk,RST,W,R,Q48);
+R49:register_8bit port map(D49,clk,RST,W,R,Q49);
+R50:register_8bit port map(D50,clk,RST,W,R,Q50);
+R51:register_8bit port map(D51,clk,RST,W,R,Q51);
+R52:register_8bit port map(D52,clk,RST,W,R,Q52);
+R53:register_8bit port map(D53,clk,RST,W,R,Q53);
+R54:register_8bit port map(D54,clk,RST,W,R,Q54);
+R55:register_8bit port map(D55,clk,RST,W,R,Q55);
+R56:register_8bit port map(D56,clk,RST,W,R,Q56);
+R57:register_8bit port map(D57,clk,RST,W,R,Q57);
+R58:register_8bit port map(D58,clk,RST,W,R,Q58);
+R59:register_8bit port map(D59,clk,RST,W,R,Q59);
+R60:register_8bit port map(D60,clk,RST,W,R,Q60);
+R61:register_8bit port map(D61,clk,RST,W,R,Q61);
+R62:register_8bit port map(D62,clk,RST,W,R,Q62);
+R63:register_8bit port map(D63,clk,RST,W,R,Q63);
+R64:register_8bit port map(D64,clk,RST,W,R,Q64);
+R65:register_8bit port map(D65,clk,RST,W,R,Q65);
+R66:register_8bit port map(D66,clk,RST,W,R,Q66);
+R67:register_8bit port map(D67,clk,RST,W,R,Q67);
+R68:register_8bit port map(D68,clk,RST,W,R,Q68);
+R69:register_8bit port map(D69,clk,RST,W,R,Q69);
+R70:register_8bit port map(D70,clk,RST,W,R,Q70);
+R71:register_8bit port map(D71,clk,RST,W,R,Q71);
+R72:register_8bit port map(D72,clk,RST,W,R,Q72);
+R73:register_8bit port map(D73,clk,RST,W,R,Q73);
+R74:register_8bit port map(D74,clk,RST,W,R,Q74);
+R75:register_8bit port map(D75,clk,RST,W,R,Q75);
+R76:register_8bit port map(D76,clk,RST,W,R,Q76);
+R77:register_8bit port map(D77,clk,RST,W,R,Q77);
+R78:register_8bit port map(D78,clk,RST,W,R,Q78);
+R79:register_8bit port map(D79,clk,RST,W,R,Q79);
+R80:register_8bit port map(D80,clk,RST,W,R,Q80);
+R81:register_8bit port map(D81,clk,RST,W,R,Q81);
+R82:register_8bit port map(D82,clk,RST,W,R,Q82);
+R83:register_8bit port map(D83,clk,RST,W,R,Q83);
+R84:register_8bit port map(D84,clk,RST,W,R,Q84);
+R85:register_8bit port map(D85,clk,RST,W,R,Q85);
+R86:register_8bit port map(D86,clk,RST,W,R,Q86);
+R87:register_8bit port map(D87,clk,RST,W,R,Q87);
+R88:register_8bit port map(D88,clk,RST,W,R,Q88);
+R89:register_8bit port map(D89,clk,RST,W,R,Q89);
+R90:register_8bit port map(D90,clk,RST,W,R,Q90);
+R91:register_8bit port map(D91,clk,RST,W,R,Q91);
+R92:register_8bit port map(D92,clk,RST,W,R,Q92);
+R93:register_8bit port map(D93,clk,RST,W,R,Q93);
+R94:register_8bit port map(D94,clk,RST,W,R,Q94);
+R95:register_8bit port map(D95,clk,RST,W,R,Q95);
+R96:register_8bit port map(D96,clk,RST,W,R,Q96);
+R97:register_8bit port map(D97,clk,RST,W,R,Q97);
+R98:register_8bit port map(D98,clk,RST,W,R,Q98);
+R99:register_8bit port map(D99,clk,RST,W,R,Q99);
+R100:register_8bit port map(D100,clk,RST,W,R,Q100);
+R101:register_8bit port map(D101,clk,RST,W,R,Q101);
+R102:register_8bit port map(D102,clk,RST,W,R,Q102);
+R103:register_8bit port map(D103,clk,RST,W,R,Q103);
+R104:register_8bit port map(D104,clk,RST,W,R,Q104);
+R105:register_8bit port map(D105,clk,RST,W,R,Q105);
+R106:register_8bit port map(D106,clk,RST,W,R,Q106);
+R107:register_8bit port map(D107,clk,RST,W,R,Q107);
+R108:register_8bit port map(D108,clk,RST,W,R,Q108);
+R109:register_8bit port map(D109,clk,RST,W,R,Q109);
+R110:register_8bit port map(D110,clk,RST,W,R,Q110);
+R111:register_8bit port map(D111,clk,RST,W,R,Q111);
+R112:register_8bit port map(D112,clk,RST,W,R,Q112);
+R113:register_8bit port map(D113,clk,RST,W,R,Q113);
+R114:register_8bit port map(D114,clk,RST,W,R,Q114);
+R115:register_8bit port map(D115,clk,RST,W,R,Q115);
+R116:register_8bit port map(D116,clk,RST,W,R,Q116);
+R117:register_8bit port map(D117,clk,RST,W,R,Q117);
+R118:register_8bit port map(D118,clk,RST,W,R,Q118);
+R119:register_8bit port map(D119,clk,RST,W,R,Q119);
+R120:register_8bit port map(D120,clk,RST,W,R,Q120);
+R121:register_8bit port map(D121,clk,RST,W,R,Q121);
+R122:register_8bit port map(D122,clk,RST,W,R,Q122);
+R123:register_8bit port map(D123,clk,RST,W,R,Q123);
+R124:register_8bit port map(D124,clk,RST,W,R,Q124);
+R125:register_8bit port map(D125,clk,RST,W,R,Q125);
+R126:register_8bit port map(D126,clk,RST,W,R,Q126);
+R127:register_8bit port map(D127,clk,RST,W,R,Q127);
+R128:register_8bit port map(D128,clk,RST,W,R,Q128);
+R129:register_8bit port map(D129,clk,RST,W,R,Q129);
+R130:register_8bit port map(D130,clk,RST,W,R,Q130);
+R131:register_8bit port map(D131,clk,RST,W,R,Q131);
+R132:register_8bit port map(D132,clk,RST,W,R,Q132);
+R133:register_8bit port map(D133,clk,RST,W,R,Q133);
+R134:register_8bit port map(D134,clk,RST,W,R,Q134);
+R135:register_8bit port map(D135,clk,RST,W,R,Q135);
+R136:register_8bit port map(D136,clk,RST,W,R,Q136);
+R137:register_8bit port map(D137,clk,RST,W,R,Q137);
+R138:register_8bit port map(D138,clk,RST,W,R,Q138);
+R139:register_8bit port map(D139,clk,RST,W,R,Q139);
+R140:register_8bit port map(D140,clk,RST,W,R,Q140);
+R141:register_8bit port map(D141,clk,RST,W,R,Q141);
+R142:register_8bit port map(D142,clk,RST,W,R,Q142);
+R143:register_8bit port map(D143,clk,RST,W,R,Q143);
+R144:register_8bit port map(D144,clk,RST,W,R,Q144);
+R145:register_8bit port map(D145,clk,RST,W,R,Q145);
+R146:register_8bit port map(D146,clk,RST,W,R,Q146);
+R147:register_8bit port map(D147,clk,RST,W,R,Q147);
+R148:register_8bit port map(D148,clk,RST,W,R,Q148);
+R149:register_8bit port map(D149,clk,RST,W,R,Q149);
+R150:register_8bit port map(D150,clk,RST,W,R,Q150);
+R151:register_8bit port map(D151,clk,RST,W,R,Q151);
+R152:register_8bit port map(D152,clk,RST,W,R,Q152);
+R153:register_8bit port map(D153,clk,RST,W,R,Q153);
+R154:register_8bit port map(D154,clk,RST,W,R,Q154);
+R155:register_8bit port map(D155,clk,RST,W,R,Q155);
+R156:register_8bit port map(D156,clk,RST,W,R,Q156);
+R157:register_8bit port map(D157,clk,RST,W,R,Q157);
+R158:register_8bit port map(D158,clk,RST,W,R,Q158);
+R159:register_8bit port map(D159,clk,RST,W,R,Q159);
+R160:register_8bit port map(D160,clk,RST,W,R,Q160);
+R161:register_8bit port map(D161,clk,RST,W,R,Q161);
+R162:register_8bit port map(D162,clk,RST,W,R,Q162);
+R163:register_8bit port map(D163,clk,RST,W,R,Q163);
+R164:register_8bit port map(D164,clk,RST,W,R,Q164);
+R165:register_8bit port map(D165,clk,RST,W,R,Q165);
+R166:register_8bit port map(D166,clk,RST,W,R,Q166);
+R167:register_8bit port map(D167,clk,RST,W,R,Q167);
+R168:register_8bit port map(D168,clk,RST,W,R,Q168);
+R169:register_8bit port map(D169,clk,RST,W,R,Q169);
+R170:register_8bit port map(D170,clk,RST,W,R,Q170);
+R171:register_8bit port map(D171,clk,RST,W,R,Q171);
+R172:register_8bit port map(D172,clk,RST,W,R,Q172);
+R173:register_8bit port map(D173,clk,RST,W,R,Q173);
+R174:register_8bit port map(D174,clk,RST,W,R,Q174);
+R175:register_8bit port map(D175,clk,RST,W,R,Q175);
+R176:register_8bit port map(D176,clk,RST,W,R,Q176);
+R177:register_8bit port map(D177,clk,RST,W,R,Q177);
+R178:register_8bit port map(D178,clk,RST,W,R,Q178);
+R179:register_8bit port map(D179,clk,RST,W,R,Q179);
+R180:register_8bit port map(D180,clk,RST,W,R,Q180);
+R181:register_8bit port map(D181,clk,RST,W,R,Q181);
+R182:register_8bit port map(D182,clk,RST,W,R,Q182);
+R183:register_8bit port map(D183,clk,RST,W,R,Q183);
+R184:register_8bit port map(D184,clk,RST,W,R,Q184);
+R185:register_8bit port map(D185,clk,RST,W,R,Q185);
+R186:register_8bit port map(D186,clk,RST,W,R,Q186);
+R187:register_8bit port map(D187,clk,RST,W,R,Q187);
+R188:register_8bit port map(D188,clk,RST,W,R,Q188);
+R189:register_8bit port map(D189,clk,RST,W,R,Q189);
+R190:register_8bit port map(D190,clk,RST,W,R,Q190);
+R191:register_8bit port map(D191,clk,RST,W,R,Q191);
+R192:register_8bit port map(D192,clk,RST,W,R,Q192);
+R193:register_8bit port map(D193,clk,RST,W,R,Q193);
+R194:register_8bit port map(D194,clk,RST,W,R,Q194);
+R195:register_8bit port map(D195,clk,RST,W,R,Q195);
+R196:register_8bit port map(D196,clk,RST,W,R,Q196);
+R197:register_8bit port map(D197,clk,RST,W,R,Q197);
+R198:register_8bit port map(D198,clk,RST,W,R,Q198);
+R199:register_8bit port map(D199,clk,RST,W,R,Q199);
+R200:register_8bit port map(D200,clk,RST,W,R,Q200);
+R201:register_8bit port map(D201,clk,RST,W,R,Q201);
+R202:register_8bit port map(D202,clk,RST,W,R,Q202);
+R203:register_8bit port map(D203,clk,RST,W,R,Q203);
+R204:register_8bit port map(D204,clk,RST,W,R,Q204);
+R205:register_8bit port map(D205,clk,RST,W,R,Q205);
+R206:register_8bit port map(D206,clk,RST,W,R,Q206);
+R207:register_8bit port map(D207,clk,RST,W,R,Q207);
+R208:register_8bit port map(D208,clk,RST,W,R,Q208);
+R209:register_8bit port map(D209,clk,RST,W,R,Q209);
+R210:register_8bit port map(D210,clk,RST,W,R,Q210);
+R211:register_8bit port map(D211,clk,RST,W,R,Q211);
+R212:register_8bit port map(D212,clk,RST,W,R,Q212);
+R213:register_8bit port map(D213,clk,RST,W,R,Q213);
+R214:register_8bit port map(D214,clk,RST,W,R,Q214);
+R215:register_8bit port map(D215,clk,RST,W,R,Q215);
+R216:register_8bit port map(D216,clk,RST,W,R,Q216);
+R217:register_8bit port map(D217,clk,RST,W,R,Q217);
+R218:register_8bit port map(D218,clk,RST,W,R,Q218);
+R219:register_8bit port map(D219,clk,RST,W,R,Q219);
+R220:register_8bit port map(D220,clk,RST,W,R,Q220);
+R221:register_8bit port map(D221,clk,RST,W,R,Q221);
+R222:register_8bit port map(D222,clk,RST,W,R,Q222);
+R223:register_8bit port map(D223,clk,RST,W,R,Q223);
+R224:register_8bit port map(D224,clk,RST,W,R,Q224);
+R225:register_8bit port map(D225,clk,RST,W,R,Q225);
+R226:register_8bit port map(D226,clk,RST,W,R,Q226);
+R227:register_8bit port map(D227,clk,RST,W,R,Q227);
+R228:register_8bit port map(D228,clk,RST,W,R,Q228);
+R229:register_8bit port map(D229,clk,RST,W,R,Q229);
+R230:register_8bit port map(D230,clk,RST,W,R,Q230);
+R231:register_8bit port map(D231,clk,RST,W,R,Q231);
+R232:register_8bit port map(D232,clk,RST,W,R,Q232);
+R233:register_8bit port map(D233,clk,RST,W,R,Q233);
+R234:register_8bit port map(D234,clk,RST,W,R,Q234);
+R235:register_8bit port map(D235,clk,RST,W,R,Q235);
+R236:register_8bit port map(D236,clk,RST,W,R,Q236);
+R237:register_8bit port map(D237,clk,RST,W,R,Q237);
+R238:register_8bit port map(D238,clk,RST,W,R,Q238);
+R239:register_8bit port map(D239,clk,RST,W,R,Q239);
+R240:register_8bit port map(D240,clk,RST,W,R,Q240);
+R241:register_8bit port map(D241,clk,RST,W,R,Q241);
+R242:register_8bit port map(D242,clk,RST,W,R,Q242);
+R243:register_8bit port map(D243,clk,RST,W,R,Q243);
+R244:register_8bit port map(D244,clk,RST,W,R,Q244);
+R245:register_8bit port map(D245,clk,RST,W,R,Q245);
+R246:register_8bit port map(D246,clk,RST,W,R,Q246);
+R247:register_8bit port map(D247,clk,RST,W,R,Q247);
+R248:register_8bit port map(D248,clk,RST,W,R,Q248);
+R249:register_8bit port map(D249,clk,RST,W,R,Q249);
+R250:register_8bit port map(D250,clk,RST,W,R,Q250);
+R251:register_8bit port map(D251,clk,RST,W,R,Q251);
+R252:register_8bit port map(D252,clk,RST,W,R,Q252);
+R253:register_8bit port map(D253,clk,RST,W,R,Q253);
+R254:register_8bit port map(D254,clk,RST,W,R,Q254);
+R255:register_8bit port map(D255,clk,RST,W,R,Q255);
+end architecture;

@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity mux2_1 is
+port(
+i0,i1,sel: in std_logic;
+F: buffer std_logic
+);
+end entity;
+
+architecture df of mux2_1 is
+begin
+process(sel)
+begin
+if sel='0' then F<=i0;
+if sel='1' then F<=i1;
+end process;
+end architecture;

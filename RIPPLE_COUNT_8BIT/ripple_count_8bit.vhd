@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ripple_count_8bit is
+port(
+clk,RST: in std_logic;
+Q:buffer std_logic_vector(7 downto 0)
+);
+end entity;
+
+architecture struc of ripple_count_8bit is
+component JK_flipflop
+port(
+J,K,clk,RST: in std_logic;
+Q,Q1:buffer std_logic
+);
+end component;
+
+signal s1:std_logic;
+signal n1,n2,n3,n4,n5,n6,n7,n8:std_logic;
+begin 
+s1<='1';
+CNTR1: JK_flipflop port map(s1,s1,clk,RST,Q(0),n1);
+CNTR2: JK_flipflop port map(s1,s1,n1,RST,Q(1),n2);
+CNTR3: JK_flipflop port map(s1,s1,n2,RST,Q(2),n3);
+CNTR4: JK_flipflop port map(s1,s1,n3,RST,Q(3),n4);
+CNTR5: JK_flipflop port map(s1,s1,n4,RST,Q(4),n5);
+CNTR6: JK_flipflop port map(s1,s1,n5,RST,Q(5),n6);
+CNTR7: JK_flipflop port map(s1,s1,n6,RST,Q(6),n7);
+CNTR8: JK_flipflop port map(s1,s1,n7,RST,Q(7),n8);
+
+end architecture;

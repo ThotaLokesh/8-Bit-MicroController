@@ -1,0 +1,747 @@
+|counter_8bit
+clk => JK_flipflop:ff0.clk
+clk => JK_flipflop:ff1.clk
+clk => JK_flipflop:ff2.clk
+clk => JK_flipflop:ff3.clk
+clk => JK_flipflop:ff4.clk
+clk => JK_flipflop:ff5.clk
+clk => JK_flipflop:ff6.clk
+clk => JK_flipflop:ff7.clk
+RST => JK_flipflop:ff0.RST
+RST => JK_flipflop:ff1.RST
+RST => JK_flipflop:ff2.RST
+RST => JK_flipflop:ff3.RST
+RST => JK_flipflop:ff4.RST
+RST => JK_flipflop:ff5.RST
+RST => JK_flipflop:ff6.RST
+RST => JK_flipflop:ff7.RST
+Q[0] << JK_flipflop:ff0.Q
+Q[1] << JK_flipflop:ff1.Q
+Q[2] << JK_flipflop:ff2.Q
+Q[3] << JK_flipflop:ff3.Q
+Q[4] << JK_flipflop:ff4.Q
+Q[5] << JK_flipflop:ff5.Q
+Q[6] << JK_flipflop:ff6.Q
+Q[7] << JK_flipflop:ff7.Q
+Q1[0] << JK_flipflop:ff0.Q1
+Q1[1] << JK_flipflop:ff1.Q1
+Q1[2] << JK_flipflop:ff2.Q1
+Q1[3] << JK_flipflop:ff3.Q1
+Q1[4] << JK_flipflop:ff4.Q1
+Q1[5] << JK_flipflop:ff5.Q1
+Q1[6] << JK_flipflop:ff6.Q1
+Q1[7] << JK_flipflop:ff7.Q1
+
+
+|counter_8bit|JK_flipflop:ff0
+J => comb.IN1
+K => comb.IN1
+clk => d_flipflop:JK_flipflop.clk
+RST => d_flipflop:JK_flipflop.RST
+Q <= d_flipflop:JK_flipflop.Q
+Q1 <= d_flipflop:JK_flipflop.Q1
+
+
+|counter_8bit|JK_flipflop:ff0|D_flipflop:JK_flipflop
+D => D_latch:D0.D
+clk => D_latch:D1.clk
+clk => D_latch:D0.clk
+RST => D_latch:D0.RST
+RST => D_latch:D1.RST
+Q <= D_latch:D1.Q
+Q1 <= D_latch:D1.Q1
+
+
+|counter_8bit|JK_flipflop:ff0|D_flipflop:JK_flipflop|D_latch:D0
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff0|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff0|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff0|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff0|D_flipflop:JK_flipflop|D_latch:D0|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff0|D_flipflop:JK_flipflop|D_latch:D1
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff0|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff0|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff0|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff0|D_flipflop:JK_flipflop|D_latch:D1|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff1
+J => comb.IN1
+K => comb.IN1
+clk => d_flipflop:JK_flipflop.clk
+RST => d_flipflop:JK_flipflop.RST
+Q <= d_flipflop:JK_flipflop.Q
+Q1 <= d_flipflop:JK_flipflop.Q1
+
+
+|counter_8bit|JK_flipflop:ff1|D_flipflop:JK_flipflop
+D => D_latch:D0.D
+clk => D_latch:D1.clk
+clk => D_latch:D0.clk
+RST => D_latch:D0.RST
+RST => D_latch:D1.RST
+Q <= D_latch:D1.Q
+Q1 <= D_latch:D1.Q1
+
+
+|counter_8bit|JK_flipflop:ff1|D_flipflop:JK_flipflop|D_latch:D0
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff1|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff1|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff1|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff1|D_flipflop:JK_flipflop|D_latch:D0|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff1|D_flipflop:JK_flipflop|D_latch:D1
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff1|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff1|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff1|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff1|D_flipflop:JK_flipflop|D_latch:D1|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff2
+J => comb.IN1
+K => comb.IN1
+clk => d_flipflop:JK_flipflop.clk
+RST => d_flipflop:JK_flipflop.RST
+Q <= d_flipflop:JK_flipflop.Q
+Q1 <= d_flipflop:JK_flipflop.Q1
+
+
+|counter_8bit|JK_flipflop:ff2|D_flipflop:JK_flipflop
+D => D_latch:D0.D
+clk => D_latch:D1.clk
+clk => D_latch:D0.clk
+RST => D_latch:D0.RST
+RST => D_latch:D1.RST
+Q <= D_latch:D1.Q
+Q1 <= D_latch:D1.Q1
+
+
+|counter_8bit|JK_flipflop:ff2|D_flipflop:JK_flipflop|D_latch:D0
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff2|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff2|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff2|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff2|D_flipflop:JK_flipflop|D_latch:D0|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff2|D_flipflop:JK_flipflop|D_latch:D1
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff2|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff2|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff2|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff2|D_flipflop:JK_flipflop|D_latch:D1|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff3
+J => comb.IN1
+K => comb.IN1
+clk => d_flipflop:JK_flipflop.clk
+RST => d_flipflop:JK_flipflop.RST
+Q <= d_flipflop:JK_flipflop.Q
+Q1 <= d_flipflop:JK_flipflop.Q1
+
+
+|counter_8bit|JK_flipflop:ff3|D_flipflop:JK_flipflop
+D => D_latch:D0.D
+clk => D_latch:D1.clk
+clk => D_latch:D0.clk
+RST => D_latch:D0.RST
+RST => D_latch:D1.RST
+Q <= D_latch:D1.Q
+Q1 <= D_latch:D1.Q1
+
+
+|counter_8bit|JK_flipflop:ff3|D_flipflop:JK_flipflop|D_latch:D0
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff3|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff3|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff3|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff3|D_flipflop:JK_flipflop|D_latch:D0|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff3|D_flipflop:JK_flipflop|D_latch:D1
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff3|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff3|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff3|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff3|D_flipflop:JK_flipflop|D_latch:D1|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff4
+J => comb.IN1
+K => comb.IN1
+clk => d_flipflop:JK_flipflop.clk
+RST => d_flipflop:JK_flipflop.RST
+Q <= d_flipflop:JK_flipflop.Q
+Q1 <= d_flipflop:JK_flipflop.Q1
+
+
+|counter_8bit|JK_flipflop:ff4|D_flipflop:JK_flipflop
+D => D_latch:D0.D
+clk => D_latch:D1.clk
+clk => D_latch:D0.clk
+RST => D_latch:D0.RST
+RST => D_latch:D1.RST
+Q <= D_latch:D1.Q
+Q1 <= D_latch:D1.Q1
+
+
+|counter_8bit|JK_flipflop:ff4|D_flipflop:JK_flipflop|D_latch:D0
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff4|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff4|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff4|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff4|D_flipflop:JK_flipflop|D_latch:D0|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff4|D_flipflop:JK_flipflop|D_latch:D1
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff4|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff4|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff4|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff4|D_flipflop:JK_flipflop|D_latch:D1|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff5
+J => comb.IN1
+K => comb.IN1
+clk => d_flipflop:JK_flipflop.clk
+RST => d_flipflop:JK_flipflop.RST
+Q <= d_flipflop:JK_flipflop.Q
+Q1 <= d_flipflop:JK_flipflop.Q1
+
+
+|counter_8bit|JK_flipflop:ff5|D_flipflop:JK_flipflop
+D => D_latch:D0.D
+clk => D_latch:D1.clk
+clk => D_latch:D0.clk
+RST => D_latch:D0.RST
+RST => D_latch:D1.RST
+Q <= D_latch:D1.Q
+Q1 <= D_latch:D1.Q1
+
+
+|counter_8bit|JK_flipflop:ff5|D_flipflop:JK_flipflop|D_latch:D0
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff5|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff5|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff5|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff5|D_flipflop:JK_flipflop|D_latch:D0|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff5|D_flipflop:JK_flipflop|D_latch:D1
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff5|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff5|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff5|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff5|D_flipflop:JK_flipflop|D_latch:D1|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff6
+J => comb.IN1
+K => comb.IN1
+clk => d_flipflop:JK_flipflop.clk
+RST => d_flipflop:JK_flipflop.RST
+Q <= d_flipflop:JK_flipflop.Q
+Q1 <= d_flipflop:JK_flipflop.Q1
+
+
+|counter_8bit|JK_flipflop:ff6|D_flipflop:JK_flipflop
+D => D_latch:D0.D
+clk => D_latch:D1.clk
+clk => D_latch:D0.clk
+RST => D_latch:D0.RST
+RST => D_latch:D1.RST
+Q <= D_latch:D1.Q
+Q1 <= D_latch:D1.Q1
+
+
+|counter_8bit|JK_flipflop:ff6|D_flipflop:JK_flipflop|D_latch:D0
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff6|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff6|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff6|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff6|D_flipflop:JK_flipflop|D_latch:D0|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff6|D_flipflop:JK_flipflop|D_latch:D1
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff6|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff6|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff6|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff6|D_flipflop:JK_flipflop|D_latch:D1|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff7
+J => comb.IN1
+K => comb.IN1
+clk => d_flipflop:JK_flipflop.clk
+RST => d_flipflop:JK_flipflop.RST
+Q <= d_flipflop:JK_flipflop.Q
+Q1 <= d_flipflop:JK_flipflop.Q1
+
+
+|counter_8bit|JK_flipflop:ff7|D_flipflop:JK_flipflop
+D => D_latch:D0.D
+clk => D_latch:D1.clk
+clk => D_latch:D0.clk
+RST => D_latch:D0.RST
+RST => D_latch:D1.RST
+Q <= D_latch:D1.Q
+Q1 <= D_latch:D1.Q1
+
+
+|counter_8bit|JK_flipflop:ff7|D_flipflop:JK_flipflop|D_latch:D0
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff7|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff7|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff7|D_flipflop:JK_flipflop|D_latch:D0|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff7|D_flipflop:JK_flipflop|D_latch:D0|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff7|D_flipflop:JK_flipflop|D_latch:D1
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|counter_8bit|JK_flipflop:ff7|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff7|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff7|D_flipflop:JK_flipflop|D_latch:D1|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_8bit|JK_flipflop:ff7|D_flipflop:JK_flipflop|D_latch:D1|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+

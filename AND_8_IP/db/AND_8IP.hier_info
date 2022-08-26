@@ -1,0 +1,12 @@
+|AND_8IP
+A[0] => F.IN0
+A[1] => F.IN1
+A[2] => F.IN1
+A[3] => F.IN1
+A[4] => F.IN1
+A[5] => F.IN1
+A[6] => F.IN1
+A[7] => F.IN1
+F << F.DB_MAX_OUTPUT_PORT_TYPE
+
+

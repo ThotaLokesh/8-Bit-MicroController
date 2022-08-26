@@ -1,0 +1,103 @@
+|D_FLIPFLOP_RW
+D => mux2_1:mux.i1
+clk => d_flipflop:D_ff.clk
+RST => d_flipflop:D_ff.RST
+W => mux2_1:mux.sel
+R => tri_buff:Tristate_buffer.sel
+Q << tri_buff:Tristate_buffer.F
+
+
+|D_FLIPFLOP_RW|mux2_1:mux
+i0 => F.IN0
+i1 => F.IN0
+sel => F.IN1
+sel => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_FLIPFLOP_RW|D_flipflop:D_ff
+D => D_latch:D0.D
+clk => D_latch:D1.clk
+clk => D_latch:D0.clk
+RST => D_latch:D0.RST
+RST => D_latch:D1.RST
+Q <= D_latch:D1.Q
+Q1 <= D_latch:D1.Q1
+
+
+|D_FLIPFLOP_RW|D_flipflop:D_ff|D_latch:D0
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|D_FLIPFLOP_RW|D_flipflop:D_ff|D_latch:D0|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_FLIPFLOP_RW|D_flipflop:D_ff|D_latch:D0|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_FLIPFLOP_RW|D_flipflop:D_ff|D_latch:D0|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_FLIPFLOP_RW|D_flipflop:D_ff|D_latch:D0|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_FLIPFLOP_RW|D_flipflop:D_ff|D_latch:D1
+D => nand_2:nand0.A
+D => nand_2:nand1.A
+clk => nand_2:nand0.B
+clk => nand_2:nand1.B
+RST => nand_3:nand3.C
+Q <= nand_2:nand2.F
+Q1 <= nand_3:nand3.F
+
+
+|D_FLIPFLOP_RW|D_flipflop:D_ff|D_latch:D1|nand_2:nand0
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_FLIPFLOP_RW|D_flipflop:D_ff|D_latch:D1|nand_2:nand1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_FLIPFLOP_RW|D_flipflop:D_ff|D_latch:D1|nand_2:nand2
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_FLIPFLOP_RW|D_flipflop:D_ff|D_latch:D1|nand_3:nand3
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_FLIPFLOP_RW|tri_buff:Tristate_buffer
+A => F.DATAIN
+sel => F.OE
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+

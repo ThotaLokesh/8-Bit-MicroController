@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity counter_8bit is
+port(
+clk,RST:in std_logic;
+Q:out std_logic_vector(7 downto 0)
+);
+end entity;
+
+architecture struc of counter_8bit is
+signal s0,s1,s2,s3,s4,s5,s6,s7:std_logic;
+component JK_flipflop
+port(
+J,K,clk,RST: in std_logic;
+Q,Q1:buffer std_logic
+);
+end component;
+begin
+ff0: JK_flipflop port map('1','1',clk,RST,Q(0),s0);
+ff1: JK_flipflop port map(s0,s0,clk,RST,Q(1),s1);
+ff2: JK_flipflop port map(Q(1) and Q(0),Q(1) and Q(0),clk,RST,Q(2),s2);
+ff3: JK_flipflop port map(Q(2) and Q(1),Q(2) and Q(1),clk,RST,Q(3),s3);
+ff4: JK_flipflop port map(Q(3) and Q(2),Q(3) and Q(2),clk,RST,Q(4),s4);
+ff5: JK_flipflop port map(Q(4) and Q(3),Q(4) and Q(3),clk,RST,Q(5),s5);
+ff6: JK_flipflop port map(Q(5) and Q(4),Q(5) and Q(4),clk,RST,Q(6),s6);
+ff7: JK_flipflop port map(Q(6) and Q(5),Q(6) and Q(5),clk,RST,Q(7),s7);
+end architecture;

@@ -1,0 +1,201 @@
+# Reading pref.tcl
+# do counter_8bit_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {counter_8bit.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 07:20:49 on Jul 29,2022
+# vcom -reportprogress 300 -93 -work work counter_8bit.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Compiling entity counter_8bit
+# -- Compiling architecture structure of counter_8bit
+# End time: 07:20:50 on Jul 29,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 07:20:50 on Jul 29,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Test_Bench
+# -- Compiling architecture tb of Test_Bench
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Loading entity counter_8bit
+# ** Warning: C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd(12): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd(19): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd(22): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 07:20:50 on Jul 29,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# 
+# vsim -t 1ps -L altera -L cycloneive -L gate_work -L work -voptargs="+acc"  Test_Bench
+# vsim -t 1ps -L altera -L cycloneive -L gate_work -L work -voptargs=""+acc"" Test_Bench 
+# Start time: 07:20:50 on Jul 29,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.test_bench(tb)
+# Loading work.counter_8bit(structure)
+# Loading work.hard_block(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: HP  Hostname: LAPTOP-K8S5A5CM  ProcessID: 6836
+#           Attempting to use alternate WLF file "./wlftnrmk7r".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnrmk7r
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 90 ns ###############
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~2\/VITALtiming @ sub-iteration 0 to value HiX
+#     Source: counter_8bit.vho:564
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D1|nand2|F~1\/VITALtiming @ sub-iteration 0 to value HiZ
+#     Source: counter_8bit.vho:581
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~1\/VITALtiming @ sub-iteration 0 to value HiZ
+#     Source: counter_8bit.vho:546
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~1\/VITALtiming @ sub-iteration 0 to value HiZ
+#     Source: counter_8bit.vho:546
+#   ByteEvent process: /test_bench/uut/\Q[2]~output\/line__7352 @ sub-iteration 0 to value HiX
+#     Source: counter_8bit.vho:267
+#   ByteEvent process: /test_bench/uut/\Q[2]~output\/line__7352 @ sub-iteration 0 to value HiZ
+#     Source: counter_8bit.vho:267
+#   1164Event process: /test_bench/uut/line__216 @ sub-iteration 1 to value HiZ
+#     Source: C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd:11
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~2\/VITALtiming @ sub-iteration 2 to value HiZ
+#     Source: counter_8bit.vho:564
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D1|nand2|F~1\/VITALtiming @ sub-iteration 2 to value HiX
+#     Source: counter_8bit.vho:581
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~1\/VITALtiming @ sub-iteration 2 to value HiX
+#     Source: counter_8bit.vho:546
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~1\/VITALtiming @ sub-iteration 2 to value HiX
+#     Source: counter_8bit.vho:546
+#   ByteEvent process: /test_bench/uut/\Q[2]~output\/line__7352 @ sub-iteration 2 to value HiZ
+#     Source: counter_8bit.vho:267
+#   ByteEvent process: /test_bench/uut/\Q[2]~output\/line__7352 @ sub-iteration 2 to value HiX
+#     Source: counter_8bit.vho:267
+#   1164Event process: /test_bench/uut/line__216 @ sub-iteration 3 to value HiX
+#     Source: C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd:11
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~2\/VITALtiming @ sub-iteration 4 to value HiX
+#     Source: counter_8bit.vho:564
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 90 ns.
+vsim -t 100ps -L altera -L cycloneive -L gate_work -L work -voptargs=\"+acc\" work.test_bench(tb)
+# End time: 07:22:02 on Jul 29,2022, Elapsed time: 0:01:12
+# Errors: 1, Warnings: 2
+# vsim -t 100ps -L altera -L cycloneive -L gate_work -L work -voptargs=""+acc"" work.test_bench(tb) 
+# Start time: 07:22:02 on Jul 29,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.test_bench(tb)
+# Loading work.counter_8bit(structure)
+# Loading work.hard_block(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+run -all
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 90 ns ###############
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~2\/VITALtiming @ sub-iteration 0 to value HiX
+#     Source: counter_8bit.vho:564
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D1|nand2|F~1\/VITALtiming @ sub-iteration 0 to value HiZ
+#     Source: counter_8bit.vho:581
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~1\/VITALtiming @ sub-iteration 0 to value HiZ
+#     Source: counter_8bit.vho:546
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~1\/VITALtiming @ sub-iteration 0 to value HiZ
+#     Source: counter_8bit.vho:546
+#   ByteEvent process: /test_bench/uut/\Q[2]~output\/line__7352 @ sub-iteration 0 to value HiX
+#     Source: counter_8bit.vho:267
+#   ByteEvent process: /test_bench/uut/\Q[2]~output\/line__7352 @ sub-iteration 0 to value HiZ
+#     Source: counter_8bit.vho:267
+#   1164Event process: /test_bench/uut/line__216 @ sub-iteration 1 to value HiZ
+#     Source: C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd:11
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~2\/VITALtiming @ sub-iteration 2 to value HiZ
+#     Source: counter_8bit.vho:564
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D1|nand2|F~1\/VITALtiming @ sub-iteration 2 to value HiX
+#     Source: counter_8bit.vho:581
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~1\/VITALtiming @ sub-iteration 2 to value HiX
+#     Source: counter_8bit.vho:546
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~1\/VITALtiming @ sub-iteration 2 to value HiX
+#     Source: counter_8bit.vho:546
+#   ByteEvent process: /test_bench/uut/\Q[2]~output\/line__7352 @ sub-iteration 2 to value HiZ
+#     Source: counter_8bit.vho:267
+#   ByteEvent process: /test_bench/uut/\Q[2]~output\/line__7352 @ sub-iteration 2 to value HiX
+#     Source: counter_8bit.vho:267
+#   1164Event process: /test_bench/uut/line__216 @ sub-iteration 3 to value HiX
+#     Source: C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd:11
+#   ByteEvent process: /test_bench/uut/\ff2|JK_flipflop|D0|nand2|F~2\/VITALtiming @ sub-iteration 4 to value HiX
+#     Source: counter_8bit.vho:564
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 10000 reached at time 90 ns.
+add wave -position insertpoint  \
+sim:/test_bench/uut/ww_clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: HP  Hostname: LAPTOP-K8S5A5CM  ProcessID: 6836
+#           Attempting to use alternate WLF file "./wlftaantk9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftaantk9
+add wave -position insertpoint  \
+sim:/test_bench/uut/\\RST~input_o\\
+add wave -position insertpoint  \
+sim:/test_bench/uut/\\Q\[0\]~output_o\\
+add wave -position insertpoint  \
+sim:/test_bench/uut/\\Q\[1\]~output_o\\
+add wave -position insertpoint  \
+sim:/test_bench/uut/\\Q\[2\]~output_o\\
+add wave -position insertpoint  \
+sim:/test_bench/uut/\\Q\[3\]~output_o\\
+add wave -position insertpoint  \
+sim:/test_bench/uut/\\Q\[4\]~output_o\\
+add wave -position insertpoint  \
+sim:/test_bench/uut/\\Q\[5\]~output_o\\
+add wave -position insertpoint  \
+sim:/test_bench/uut/\\Q\[6\]~output_o\\
+add wave -position insertpoint  \
+sim:/test_bench/uut/\\Q\[7\]~output_o\\
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 10000 reached at time 90 ns.
+run -all
+# End time: 07:35:14 on Jul 29,2022, Elapsed time: 0:13:12
+# Errors: 2, Warnings: 2

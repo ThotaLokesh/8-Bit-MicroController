@@ -1,0 +1,65 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'RST'
+Slack : -10.845
+TNS   : -58.903
+
+Type  : Slow 1200mV 85C Model Hold 'RST'
+Slack : -0.750
+TNS   : -2.476
+
+Type  : Slow 1200mV 85C Model Recovery 'RST'
+Slack : -3.786
+TNS   : -11.176
+
+Type  : Slow 1200mV 85C Model Removal 'RST'
+Slack : -5.353
+TNS   : -13.801
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RST'
+Slack : -4.008
+TNS   : -377.294
+
+Type  : Slow 1200mV 0C Model Setup 'RST'
+Slack : -9.754
+TNS   : -52.791
+
+Type  : Slow 1200mV 0C Model Hold 'RST'
+Slack : -0.621
+TNS   : -1.950
+
+Type  : Slow 1200mV 0C Model Recovery 'RST'
+Slack : -3.385
+TNS   : -9.833
+
+Type  : Slow 1200mV 0C Model Removal 'RST'
+Slack : -4.854
+TNS   : -12.439
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RST'
+Slack : -3.479
+TNS   : -330.889
+
+Type  : Fast 1200mV 0C Model Setup 'RST'
+Slack : -6.429
+TNS   : -34.333
+
+Type  : Fast 1200mV 0C Model Hold 'RST'
+Slack : -0.384
+TNS   : -0.735
+
+Type  : Fast 1200mV 0C Model Recovery 'RST'
+Slack : -2.550
+TNS   : -7.678
+
+Type  : Fast 1200mV 0C Model Removal 'RST'
+Slack : -2.841
+TNS   : -7.191
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RST'
+Slack : -3.000
+TNS   : -173.817
+
+------------------------------------------------------------

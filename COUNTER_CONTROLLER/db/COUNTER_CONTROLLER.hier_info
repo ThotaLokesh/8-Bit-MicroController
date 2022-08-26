@@ -1,0 +1,28 @@
+|COUNTER_CONTROLLER
+clk_4096 => tri_buff:TB0.A
+clk => tri_buff:TB1.A
+RST => comb.IN0
+RST => comb.IN0
+RST => O_rst.IN1
+load => comb.IN1
+load => O_rst.IN0
+load => comb.IN1
+start => comb.IN1
+start => O_rst.IN1
+start => comb.IN1
+O_clk <= O_clk.DB_MAX_OUTPUT_PORT_TYPE
+O_rst <= O_rst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|COUNTER_CONTROLLER|tri_buff:TB0
+A => F.DATAIN
+sel => F.OE
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|COUNTER_CONTROLLER|tri_buff:TB1
+A => F.DATAIN
+sel => F.OE
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+

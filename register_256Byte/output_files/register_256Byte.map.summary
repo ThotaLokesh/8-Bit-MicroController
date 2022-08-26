@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Jul 24 17:22:19 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : register_256Byte
+Top-level Entity Name : register_256Byte
+Family : Cyclone IV E
+Total logic elements : 7,444
+    Total combinational functions : 7,444
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 520
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,155 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/simulation/modelsim
+Ecounter_8bit
+Z1 w1659059442
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 WOh:M[al;oVzG5c`<He>D0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 zGMDhP>8e@2k@f0e<PY]k2
+!i122 0
+R0
+Z8 8counter_8bit.vho
+Z9 Fcounter_8bit.vho
+l0
+L78 1
+Vh;bGlXoN>YPX6<o2PN3>g3
+!s100 obVPLK=cRz[LC^7Tc7oC>0
+Z10 OV;C;2020.1;71
+31
+Z11 !s110 1659059450
+!i10b 1
+Z12 !s108 1659059449.000000
+Z13 !s90 -reportprogress|300|-93|-work|work|counter_8bit.vho|
+Z14 !s107 counter_8bit.vho|
+!i113 1
+Z15 o-93 -work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+Z17 DEx4 work 12 counter_8bit 0 22 h;bGlXoN>YPX6<o2PN3>g3
+!i122 0
+l200
+L108 965
+V7k3a?FTGAd_OE[z?`D>j`3
+!s100 6M<C]@B_PRm4]TU:@6lgT2
+R10
+31
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Ehard_block
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+!i122 0
+R0
+R8
+R9
+l0
+L35 1
+Vi9a_SfXm?YhLI2dhm1j^51
+!s100 >mXi5[`cD`bFC`UBKA<om3
+R10
+31
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 i9a_SfXm?YhLI2dhm1j^51
+!i122 0
+l65
+L51 20
+VWdBQm4eNm6eGHO;iQNz`j1
+!s100 [5;Wd8QGQ>@2NGoJ1I]Y43
+R10
+31
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Etest_bench
+Z18 w1659029740
+R5
+R6
+!i122 1
+R0
+Z19 8C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd
+Z20 FC:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd
+l0
+L4 1
+V90EWAX@@]G`n<8hdE;k@h3
+!s100 84Ak^oDdF:CHzfTSgUUkA2
+R10
+31
+R11
+!i10b 1
+Z21 !s108 1659059450.000000
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd|
+!s107 C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd|
+!i113 1
+R15
+R16
+Atb
+R2
+R3
+R4
+R7
+R17
+R5
+R6
+DEx4 work 10 test_bench 0 22 90EWAX@@]G`n<8hdE;k@h3
+!i122 1
+l10
+L7 20
+VC4=Ti7bjSi6kWJDCiQ?AQ3
+!s100 3@0kga3`oP12BP]NJ7FWA3
+R10
+31
+R11
+!i10b 1
+R21
+R22
+Z23 !s107 C:/Users/HP/Documents/PROJECT_PROCESSOR/counter_8bit/Test_Bench.vhd|
+!i113 1
+R15
+R16

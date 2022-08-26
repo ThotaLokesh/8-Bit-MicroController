@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity JK_flipflop is
+port(
+J,K,clk,RST: in std_logic;
+Q,Q1:buffer std_logic
+);
+end entity;
+
+architecture struc of JK_flipflop is
+begin
+JK_flipflop: entity work.D_flipflop port map(((J and Q1) or (not K and Q)), clk,RST,Q,Q1);
+end architecture;

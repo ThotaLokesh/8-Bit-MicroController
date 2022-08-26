@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity register_16Byte is
+port(
+D0,D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15: in std_logic_vector(0 to 7);
+clk,RST,W,R: in std_logic;
+Q0,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13,Q14,Q15: buffer std_logic_vector(0 to 7)
+);
+end entity;
+
+ARCHITECTURE struc of register_16Byte is
+component register_8bit 
+port(
+D: in std_logic_vector(0 to 7);
+clk,RST,W,R: in std_logic;
+Q: buffer std_logic_vector(0 to 7)
+);
+end component;
+begin
+Register_16Byte: register_8bit port map(D0,clk,RST,W,R,Q0);
+register_8bit port map(D1,clk,RST,W,R,Q1);
+register_8bit port map(D2,clk,RST,W,R,Q2);
+register_8bit port map(D3,clk,RST,W,R,Q3);
+register_8bit port map(D4,clk,RST,W,R,Q4);
+register_8bit port map(D5,clk,RST,W,R,Q5);
+register_8bit port map(D6,clk,RST,W,R,Q6);
+register_8bit port map(D7,clk,RST,W,R,Q7);
+register_8bit port map(D8,clk,RST,W,R,Q8);
+register_8bit port map(D9,clk,RST,W,R,Q9);
+register_8bit port map(D10,clk,RST,W,R,Q10);
+register_8bit port map(D11,clk,RST,W,R,Q11);
+register_8bit port map(D12,clk,RST,W,R,Q12);
+register_8bit port map(D13,clk,RST,W,R,Q13);
+register_8bit port map(D14,clk,RST,W,R,Q14);
+register_8bit port map(D15,clk,RST,W,R,Q15);
+end architecture;
